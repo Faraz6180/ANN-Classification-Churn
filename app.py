@@ -32,18 +32,18 @@ st.markdown(
         background-color: #0f3460;
         color: #eaeaea;
     }
-    .stButton>button {
+    .stButton > button {
         background-color: #e94560;
         color: white;
         font-size: 18px;
         padding: 10px 20px;
         border-radius: 10px;
     }
-    .stTextInput>div>div>input {
+    .stTextInput > div > div > input {
         background-color: #16213e;
         color: white;
     }
-    .stSelectbox>div>div>div>button {
+    .stSelectbox > div > div > div > button {
         background-color: #16213e;
         color: white;
     }
@@ -115,7 +115,7 @@ input_data_scaled = scaler.transform(input_data)
 prediction = model.predict(input_data_scaled)
 prediction_proba = float(prediction[0][0])  # Convert to a standard Python float
 
-# Function to plot a pie chart for churn probability with a fixed size
+# Function to plot a pie chart for churn probability
 def plot_churn_pie(probability):
     labels = ['Will Not Churn', 'Will Churn']
     sizes = [1 - probability, probability]
@@ -127,13 +127,13 @@ def plot_churn_pie(probability):
     ax.axis('equal')
     return fig
 
-# Function to visualize reasons for churn with a fixed size
+# Function to visualize reasons for churn
 def plot_reasons(reasons):
     labels = list(reasons.keys())
     values = list(reasons.values())
     colors = ['#ff6f61' if v == 1 else '#6abf69' for v in values]
 
-    fig, ax = plt.subplots(figsize=(8, 4))  # Adjust size
+    fig, ax = plt.subplots(figsize=(8, 4))
     ax.barh(labels, values, color=colors)
     ax.set_xlabel('Risk Indicators')
     ax.set_title('Factors Contributing to Churn')
@@ -173,10 +173,10 @@ for reason, triggered in reasons.items():
 # Recommendations for user action
 st.markdown("<div class='report-container'><div class='report-title'>✅ Suggestions to Retain the Customer:</div></div>", unsafe_allow_html=True)
 if credit_score < 500:
-    st.info("🔹 Improve Credit Score: Encourage timely payments and proper credit usage.")
+    st.info("🔹 **Improve Credit Score**: Encourage timely payments and proper credit usage.")
 if balance < 1000:
-    st.info("🔹 Increase Account Balance: Educate on benefits of higher savings.")
+    st.info("🔹 **Increase Account Balance**: Educate on benefits of higher savings.")
 if not is_active_member:
-    st.info("🔹 Engage Inactive Members: Introduce loyalty programs and rewards.")
+    st.info("🔹 **Engage Inactive Members**: Introduce loyalty programs and rewards.")
 if num_of_products > 2:
-    st.info("🔹 Simplify Product Portfolio: Offer consolidated packages.")
+    st.info("🔹 **Simplify Product Portfolio**: Offer consolidated packages.")
