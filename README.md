@@ -10,7 +10,7 @@ Usage
 Visualization
 Contributing
 Authors
-License
+License.
 Project Overview
 This project utilizes a neural network model to predict the probability of customer churn. A user-friendly interface built with Streamlit allows users to input customer data, view predictions, and analyze results with interactive graphs and visual insights. The app not only predicts the churn probability but also provides possible reasons and retention strategies.
 
