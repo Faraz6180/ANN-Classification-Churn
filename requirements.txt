@@ -6,3 +6,7 @@ tensorboard
 matplotlib
 streamlit
 scikeras
+streamlit
+numpy
+pandas
+scikit-learn
