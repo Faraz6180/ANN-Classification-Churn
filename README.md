@@ -1,24 +1,42 @@
-# ChurnGuard — Customer Churn Prediction
+# 🛡️ ChurnGuard — Customer Churn Prediction System
 
-Predicts customer churn with 92% accuracy using PyTorch and Scikit-learn.
+> Predict which customers are about to leave — before they do.
 
-## What it does
-- Takes customer behaviour data as input
-- Predicts whether a customer will churn (leave)
-- Enables businesses to intervene before losing customers
+**🔴 Live Demo:** https://ann-classification-churn-lvenqbxecbe43fmnw46387.streamlit.app/
+---
+
+## The Problem
+Banks and telecoms lose millions every year to customer churn. Identifying at-risk customers before they leave allows targeted retention — saving 5–10x more than acquiring new ones.
+
+## What ChurnGuard Does
+Input 10 customer data points → Get instant churn probability score → Take action before customer leaves.
 
 ## Results
-- 92% prediction accuracy on test data
-- Reduces customer loss through early intervention
+- **92% prediction accuracy** on UCI Bank Customer dataset
+- Processes prediction in under 1 second
+- Identifies high-risk customers for targeted retention campaigns
 
-## Stack
-Python · PyTorch · Scikit-learn · Pandas · Streamlit
+## Tech Stack
+`Python` `PyTorch` `Scikit-learn` `Streamlit` `Pandas` `NumPy`
 
-## Run it
+## How to Run Locally
 ```bash
+git clone https://github.com/Faraz6180/ANN-Classification-Churn
+cd ANN-Classification-Churn
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Built by
-[Faraz Mubeen Haider](https://faraz-mubeen.vercel.app) — AI Engineer
+## Model Architecture
+- Input layer: 11 customer features
+- Hidden layers: 3 fully connected layers with ReLU + Dropout
+- Output: Binary classification (churn / no churn)
+- Training: Adam optimizer, Binary Cross Entropy loss
+
+## Features Used
+Credit Score · Age · Tenure · Balance · Number of Products · Has Credit Card · Is Active Member · Estimated Salary · Geography · Gender
+
+---
+
+**Built by Faraz Mubeen** — AI Engineer targeting UAE/Saudi roles from August 2026  
+🌐 [Portfolio](https://faraz-mubeen.vercel.app) · 💼 [LinkedIn](https://linkedin.com/in/fm618) · 📧 faraz.outreach8@gmail.com
